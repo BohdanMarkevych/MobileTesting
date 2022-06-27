@@ -1,4 +1,4 @@
-package gmail_pages;
+package pageObjects;
 
 public class BasePage {
 

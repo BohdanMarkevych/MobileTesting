@@ -1,4 +1,4 @@
-package gmail_tests;
+package tests;
 
 public class BaseTest {
 }
