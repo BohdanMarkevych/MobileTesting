@@ -1,4 +1,4 @@
-package bussiness;
+package business;
 
 import pageObjects.ComposePage;
 import pageObjects.InitialPage;

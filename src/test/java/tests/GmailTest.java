@@ -1,6 +1,6 @@
 package tests;
 
-import bussiness.BusinessObject;
+import business.BusinessObject;
 import org.testng.annotations.Test;
 
 public class GmailTest extends BaseTest {
