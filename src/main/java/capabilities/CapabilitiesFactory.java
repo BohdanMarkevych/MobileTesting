@@ -3,6 +3,7 @@ package capabilities;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import util.PropertiesReader;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -14,6 +15,7 @@ public class CapabilitiesFactory {
     private static final String APP_PACKAGE_CAPABILITY="com.google.android.gm";
     private static final String APP_ACTIVITY_CAPABILITY="com.google.android.gm.ConversationListActivityGmail";
     private static final String DEFAULT_TIME_OUT_CAPABILITY="60";
+
 
     public static DesiredCapabilities getCapabilities(){
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -29,7 +31,7 @@ public class CapabilitiesFactory {
 
     public static URL getAppiumServerUrl(){
         try {
-            return new URL(new PropertiesReader().getURL());
+            return new URL(new PropertiesReader().getAppiumURL());
         }
         catch (MalformedURLException e){
             e.printStackTrace();

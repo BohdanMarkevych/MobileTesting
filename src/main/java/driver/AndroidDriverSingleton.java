@@ -13,7 +13,7 @@ public class AndroidDriverSingleton {
     private AndroidDriverSingleton() {
     }
 
-    public static AndroidDriver getDriver() {
+    public static AndroidDriver getAndroidDriver() {
         if (driver == null) {
             driver = new AndroidDriver(CapabilitiesFactory.getAppiumServerUrl(), CapabilitiesFactory.getCapabilities());
             driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
@@ -21,7 +21,7 @@ public class AndroidDriverSingleton {
         return driver;
     }
 
-    public static void quitDriver() {
+    public static void quitAndroidDriver() {
         driver.quit();
     }
 }
